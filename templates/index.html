@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+<div class= "jumbotron text-center">
+    <h3>Yazılım Bilimi Bloğuna Hoşgeldiniz.</h3>
+    <p>Bu blogta geliştiriciler olarak blog yazılarınızı paylaşabilirsiniz ve insanlara yardımcı olabilirsiniz.</p>
+
+</div>
+
+<ul>
+    {% for article in articles %}
+        <li>Article id: {{article.id}} - Title: {{article.title}}  - Content: {{article.content}}</li>
+    {% endfor %}
+
+</ul> <!--BU  ul etiketi alt alta listeler oluşturmamız için gerekli. --> 
+
+
+{% endblock body %}

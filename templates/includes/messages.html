@@ -1,0 +1,12 @@
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    
+    {% for category, message in messages %}
+    <div class="alert alert-{{category}}" role="alert"> <!-- burda category successa alert-success olacak dangerse aler-danger olacak. süslü parantez içerisinde belirttiğimiz bizim verdiğimiz değer-->
+    {{ message}}
+    </div>
+
+    {% endfor %}
+    
+  {% endif %}
+{% endwith %}
